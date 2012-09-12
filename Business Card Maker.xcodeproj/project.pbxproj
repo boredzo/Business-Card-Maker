@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3172C4B51600824C00CAE7B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3172C4B41600824C00CAE7B8 /* Cocoa.framework */; };
+		3172C4BF1600824C00CAE7B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4BD1600824C00CAE7B8 /* InfoPlist.strings */; };
+		3172C4C11600824C00CAE7B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172C4C01600824C00CAE7B8 /* main.m */; };
+		3172C4C51600824C00CAE7B8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4C31600824C00CAE7B8 /* Credits.rtf */; };
+		3172C4C81600824C00CAE7B8 /* PRHDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172C4C71600824C00CAE7B8 /* PRHDocument.m */; };
+		3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4C91600824C00CAE7B8 /* PRHDocument.xib */; };
+		3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4CC1600824C00CAE7B8 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3172C4B01600824C00CAE7B8 /* Business Card Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Business Card Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3172C4B41600824C00CAE7B8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3172C4B71600824C00CAE7B8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3172C4B81600824C00CAE7B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3172C4B91600824C00CAE7B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3172C4BC1600824C00CAE7B8 /* Business Card Maker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Business Card Maker-Info.plist"; sourceTree = "<group>"; };
+		3172C4BE1600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3172C4C01600824C00CAE7B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3172C4C21600824C00CAE7B8 /* Business Card Maker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Business Card Maker-Prefix.pch"; sourceTree = "<group>"; };
+		3172C4C41600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3172C4C61600824C00CAE7B8 /* PRHDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHDocument.h; sourceTree = "<group>"; };
+		3172C4C71600824C00CAE7B8 /* PRHDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHDocument.m; sourceTree = "<group>"; };
+		3172C4CA1600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PRHDocument.xib; sourceTree = "<group>"; };
+		3172C4CD1600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3172C4AD1600824C00CAE7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172C4B51600824C00CAE7B8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3172C4A51600824C00CAE7B8 = {
+			isa = PBXGroup;
+			children = (
+				3172C4BA1600824C00CAE7B8 /* Business Card Maker */,
+				3172C4B31600824C00CAE7B8 /* Frameworks */,
+				3172C4B11600824C00CAE7B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3172C4B11600824C00CAE7B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3172C4B01600824C00CAE7B8 /* Business Card Maker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3172C4B31600824C00CAE7B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3172C4B41600824C00CAE7B8 /* Cocoa.framework */,
+				3172C4B61600824C00CAE7B8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3172C4B61600824C00CAE7B8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3172C4B71600824C00CAE7B8 /* AppKit.framework */,
+				3172C4B81600824C00CAE7B8 /* CoreData.framework */,
+				3172C4B91600824C00CAE7B8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3172C4BA1600824C00CAE7B8 /* Business Card Maker */ = {
+			isa = PBXGroup;
+			children = (
+				3172C4C61600824C00CAE7B8 /* PRHDocument.h */,
+				3172C4C71600824C00CAE7B8 /* PRHDocument.m */,
+				3172C4C91600824C00CAE7B8 /* PRHDocument.xib */,
+				3172C4CC1600824C00CAE7B8 /* MainMenu.xib */,
+				3172C4BB1600824C00CAE7B8 /* Supporting Files */,
+			);
+			path = "Business Card Maker";
+			sourceTree = "<group>";
+		};
+		3172C4BB1600824C00CAE7B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3172C4BC1600824C00CAE7B8 /* Business Card Maker-Info.plist */,
+				3172C4BD1600824C00CAE7B8 /* InfoPlist.strings */,
+				3172C4C01600824C00CAE7B8 /* main.m */,
+				3172C4C21600824C00CAE7B8 /* Business Card Maker-Prefix.pch */,
+				3172C4C31600824C00CAE7B8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3172C4AF1600824C00CAE7B8 /* Business Card Maker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3172C4D11600824C00CAE7B8 /* Build configuration list for PBXNativeTarget "Business Card Maker" */;
+			buildPhases = (
+				3172C4AC1600824C00CAE7B8 /* Sources */,
+				3172C4AD1600824C00CAE7B8 /* Frameworks */,
+				3172C4AE1600824C00CAE7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Business Card Maker";
+			productName = "Business Card Maker";
+			productReference = 3172C4B01600824C00CAE7B8 /* Business Card Maker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3172C4A71600824C00CAE7B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PRH;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Peter Hosey";
+			};
+			buildConfigurationList = 3172C4AA1600824C00CAE7B8 /* Build configuration list for PBXProject "Business Card Maker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3172C4A51600824C00CAE7B8;
+			productRefGroup = 3172C4B11600824C00CAE7B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3172C4AF1600824C00CAE7B8 /* Business Card Maker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3172C4AE1600824C00CAE7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172C4BF1600824C00CAE7B8 /* InfoPlist.strings in Resources */,
+				3172C4C51600824C00CAE7B8 /* Credits.rtf in Resources */,
+				3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */,
+				3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3172C4AC1600824C00CAE7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3172C4C11600824C00CAE7B8 /* main.m in Sources */,
+				3172C4C81600824C00CAE7B8 /* PRHDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3172C4BD1600824C00CAE7B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3172C4BE1600824C00CAE7B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3172C4C31600824C00CAE7B8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3172C4C41600824C00CAE7B8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3172C4C91600824C00CAE7B8 /* PRHDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3172C4CA1600824C00CAE7B8 /* en */,
+			);
+			name = PRHDocument.xib;
+			sourceTree = "<group>";
+		};
+		3172C4CC1600824C00CAE7B8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3172C4CD1600824C00CAE7B8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3172C4CF1600824C00CAE7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3172C4D01600824C00CAE7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3172C4D21600824C00CAE7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Business Card Maker/Business Card Maker-Prefix.pch";
+				INFOPLIST_FILE = "Business Card Maker/Business Card Maker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3172C4D31600824C00CAE7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Business Card Maker/Business Card Maker-Prefix.pch";
+				INFOPLIST_FILE = "Business Card Maker/Business Card Maker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3172C4AA1600824C00CAE7B8 /* Build configuration list for PBXProject "Business Card Maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172C4CF1600824C00CAE7B8 /* Debug */,
+				3172C4D01600824C00CAE7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3172C4D11600824C00CAE7B8 /* Build configuration list for PBXNativeTarget "Business Card Maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3172C4D21600824C00CAE7B8 /* Debug */,
+				3172C4D31600824C00CAE7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3172C4A71600824C00CAE7B8 /* Project object */;
+}
