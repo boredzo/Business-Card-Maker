@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Peter Hosey. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface PRHDocument : NSDocument
 
 @end

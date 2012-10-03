@@ -8,28 +8,33 @@
 
 #import "PRHDocument.h"
 
+@interface PRHDocument ()
+
+@property(copy) NSAttributedString *documentText;
+@property(copy) NSDictionary *documentAttributes;
+
+@property(unsafe_unretained /*because NSTextView hates kittens*/) IBOutlet NSTextView *editingTextView;
+
+- (IBAction)exportPDF:(id)sender;
+
+@end
+
 @implementation PRHDocument
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-		// Add your subclass-specific initialization here.
-    }
-    return self;
+- (id)init {
+	self = [super init];
+	if (self) {
+		self.documentText = [[NSAttributedString alloc] init];
+	}
+	return self;
 }
 
-- (NSString *)windowNibName
-{
-	// Override returning the nib file name of the document
-	// If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
+- (NSString *)windowNibName {
 	return @"PRHDocument";
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController
-{
+- (void)windowControllerDidLoadNib:(NSWindowController *)aController {
 	[super windowControllerDidLoadNib:aController];
-	// Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
 
 + (BOOL)autosavesInPlace
@@ -37,23 +42,58 @@
     return YES;
 }
 
-- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
-{
-	// Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-	// You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-	NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-	@throw exception;
-	return nil;
+- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
+	NSDictionary *options = @{  };
+	NSDictionary *freshAttributesHotOutOfTheParser;
+	self.documentText = [[NSAttributedString alloc] initWithData:data options:options documentAttributes:&freshAttributesHotOutOfTheParser error:outError];
+	self.documentAttributes = freshAttributesHotOutOfTheParser;
+	return (self.documentText != nil);
 }
 
-- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
-{
-	// Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning NO.
-	// You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.
-	// If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
-	NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-	@throw exception;
-	return YES;
+- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
+	NSDictionary *attrs = self.documentAttributes ?: @{
+		NSFileTypeDocumentAttribute: (__bridge id)kUTTypeRTF
+	};
+	return [self.documentText dataFromRange:(NSRange){ 0, self.documentText.length } documentAttributes:attrs error:outError];
+}
+
+- (NSView *) viewWithNumberOfCardsAcross:(NSUInteger)numAcross down:(NSUInteger)numDown {
+	NSSize singleCardSize = self.editingTextView.frame.size;
+
+	//Need to make the view exactly as big as the paper, positioning single-card text views in it appropriately for the business card sheets' margins
+	NSRect totalFrame = { NSZeroPoint, singleCardSize };
+	totalFrame.size.width *= numAcross;
+	totalFrame.size.height *= numDown;
+	NSView *containerView = [[NSView alloc] initWithFrame:totalFrame];
+
+	NSRect singleCardFrame = { .size = singleCardSize };
+	for (NSUInteger row = 0; row < numDown; ++row) {
+		for (NSUInteger column = 0; column < numAcross; ++column) {
+			singleCardFrame.origin = (NSPoint){ singleCardSize.width * column, singleCardSize.height * row };
+			NSTextView *singleCardView = [[NSTextView alloc] initWithFrame:singleCardFrame];
+			[singleCardView.textStorage setAttributedString:self.documentText];
+			[containerView addSubview:singleCardView];
+		}
+	}
+
+	return containerView;
+}
+- (IBAction)exportPDF:(id)sender {
+	NSSavePanel *savePanel = [NSSavePanel savePanel];
+	savePanel.allowedFileTypes = @[ (__bridge NSString *)kUTTypePDF ];
+	[savePanel beginSheetModalForWindow:self.windowForSheet completionHandler:^(NSInteger result) {
+		if (result == NSOKButton) {
+			NSUInteger numAcross = 5, numDown = 2;
+			NSView *view = [self viewWithNumberOfCardsAcross:numAcross down:numDown];
+			NSPrintOperation *op = [NSPrintOperation PDFOperationWithView:view insideRect:[view bounds] toPath:savePanel.URL.path printInfo:[NSPrintInfo sharedPrintInfo]];
+			op.canSpawnSeparateThread = YES;
+			[op runOperationModalForWindow:[self windowForSheet] delegate:self didRunSelector:@selector(printOperationDidRun:success:contextInfo:) contextInfo:NULL];
+		}
+	}];
+}
+
+- (void)printOperationDidRun:(NSPrintOperation *)printOperation  success:(BOOL)success  contextInfo:(void *)contextInfo {
+	
 }
 
 @end
