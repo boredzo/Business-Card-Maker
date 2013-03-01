@@ -8,6 +8,11 @@
 
 #import "PRHDocument.h"
 
+typedef NS_ENUM(NSUInteger, PRHCardMultiplier) {
+	PRHCardCountOne = 1,
+	PRHCardCountFillPage = 65535,
+};
+
 @interface PRHDocument ()
 
 @property(copy) NSAttributedString *documentText;
@@ -16,6 +21,9 @@
 @property(unsafe_unretained /*because NSTextView hates kittens*/) IBOutlet NSTextView *editingTextView;
 
 - (IBAction)exportPDF:(id)sender;
+
+@property (strong) IBOutlet NSView *accessoryView;
+@property (weak) IBOutlet NSMatrix *cardsPerPageMatrix;
 
 @end
 
@@ -81,9 +89,16 @@
 - (IBAction)exportPDF:(id)sender {
 	NSSavePanel *savePanel = [NSSavePanel savePanel];
 	savePanel.allowedFileTypes = @[ (__bridge NSString *)kUTTypePDF ];
+	savePanel.accessoryView = self.accessoryView;
 	[savePanel beginSheetModalForWindow:self.windowForSheet completionHandler:^(NSInteger result) {
 		if (result == NSOKButton) {
-			NSUInteger numAcross = 5, numDown = 2;
+			NSUInteger numAcross, numDown;
+			if (self.cardsPerPageMatrix.selectedTag == PRHCardCountFillPage) {
+				numAcross = 5;
+				numDown = 2;
+			} else {
+				numAcross = numDown = 1;
+			}
 			NSView *view = [self viewWithNumberOfCardsAcross:numAcross down:numDown];
 			NSPrintOperation *op = [NSPrintOperation PDFOperationWithView:view insideRect:[view bounds] toPath:savePanel.URL.path printInfo:[NSPrintInfo sharedPrintInfo]];
 			op.canSpawnSeparateThread = YES;
