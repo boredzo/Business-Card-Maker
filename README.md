@@ -3,7 +3,7 @@
 
 This Mac app is a basic word processor (like TextEdit) that is capable of exporting the document to a sheet of business cards.
 
-The app's native document format is RTF, and exports sheets as PDF.
+The app's native document format is RTF, and it exports sheets as PDF.
 
 ### Future features
 
