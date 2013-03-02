@@ -14,6 +14,7 @@
 		3172C4C81600824C00CAE7B8 /* PRHDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172C4C71600824C00CAE7B8 /* PRHDocument.m */; };
 		3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4C91600824C00CAE7B8 /* PRHDocument.xib */; };
 		3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4CC1600824C00CAE7B8 /* MainMenu.xib */; };
+		3196EF4F16E1B9D500C937C8 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3172C4C71600824C00CAE7B8 /* PRHDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHDocument.m; sourceTree = "<group>"; };
 		3172C4CA1600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PRHDocument.xib; sourceTree = "<group>"; };
 		3172C4CD1600824C00CAE7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				3172C4BA1600824C00CAE7B8 /* Business Card Maker */,
+				3196EF3616E1B9D500C937C8 /* Warnings */,
 				3172C4B31600824C00CAE7B8 /* Frameworks */,
 				3172C4B11600824C00CAE7B8 /* Products */,
 			);
@@ -103,6 +106,14 @@
 				3172C4C31600824C00CAE7B8 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3196EF3616E1B9D500C937C8 /* Warnings */ = {
+			isa = PBXGroup;
+			children = (
+				3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */,
+			);
+			path = Warnings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				3172C4C51600824C00CAE7B8 /* Credits.rtf in Resources */,
 				3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */,
 				3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */,
+				3196EF4F16E1B9D500C937C8 /* Warnings.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +228,7 @@
 /* Begin XCBuildConfiguration section */
 		3172C4CF1600824C00CAE7B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -244,6 +257,7 @@
 		};
 		3172C4D01600824C00CAE7B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
