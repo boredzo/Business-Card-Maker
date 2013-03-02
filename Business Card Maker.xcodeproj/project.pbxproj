@@ -14,7 +14,6 @@
 		3172C4C81600824C00CAE7B8 /* PRHDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3172C4C71600824C00CAE7B8 /* PRHDocument.m */; };
 		3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4C91600824C00CAE7B8 /* PRHDocument.xib */; };
 		3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3172C4CC1600824C00CAE7B8 /* MainMenu.xib */; };
-		3196EF4F16E1B9D500C937C8 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3196EF3816E1B9D500C937C8 /* Warnings.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PRH;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Peter Hosey";
 			};
 			buildConfigurationList = 3172C4AA1600824C00CAE7B8 /* Build configuration list for PBXProject "Business Card Maker" */;
@@ -172,7 +171,6 @@
 				3172C4C51600824C00CAE7B8 /* Credits.rtf in Resources */,
 				3172C4CB1600824C00CAE7B8 /* PRHDocument.xib in Resources */,
 				3172C4CE1600824C00CAE7B8 /* MainMenu.xib in Resources */,
-				3196EF4F16E1B9D500C937C8 /* Warnings.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
